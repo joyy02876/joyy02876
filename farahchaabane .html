@@ -1,125 +1,99 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Farah Chaabane — GitHub Intro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #fdfaf6;
-      --card: #ffffff;
-      --accent: #d4a373;
-      --muted: #6b5e53;
-      --shadow: rgba(0,0,0,0.08);
-      --radius: 14px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin:0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--muted);
-      display:flex;
-      justify-content:center;
-      padding:40px;
-    }
-    .container {
-      max-width:900px;
-      background: var(--card);
-      border-radius: var(--radius);
-      padding:35px;
-      box-shadow: 0 8px 20px var(--shadow);
-      transition: transform 0.2s ease;
-    }
-    header { display:flex; gap:20px; align-items:center; margin-bottom:25px; }
-    .avatar {
-      width:80px; height:80px; border-radius:50%;
-      background: var(--accent);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:700; color:#fff; font-size:28px;
-      flex-shrink:0;
-      font-family: 'Playfair Display', serif;
-      transition: transform 0.3s ease;
-    }
-    .avatar:hover { transform: scale(1.1); }
-    h1 { font-family: 'Playfair Display', serif; font-size:26px; margin:0; color: var(--accent); }
-    p.lead { margin:6px 0 0; color:var(--muted); line-height:1.5; }
-
-    .section-title { font-weight:700; color: var(--accent); margin-top:25px; margin-bottom:10px; font-family: 'Playfair Display', serif; font-size:16px; }
-
-    .tech { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
-    .chip { background: #f7f2eb; padding:6px 14px; border-radius:20px; font-weight:600; color: var(--muted); border:1px solid #e6dfd5; font-size:13px; transition: background 0.2s ease; }
-    .chip:hover { background: var(--accent); color:#fff; }
-
-    .projects { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
-    .proj { padding:12px; border-left:4px solid var(--accent); background: #faf5ef; border-radius:6px; transition: transform 0.2s ease, background 0.2s ease; }
-    .proj:hover { transform: translateX(4px); background: #f4ece2; }
-    .proj h4 { margin:0 0 5px 0; font-family: 'Playfair Display', serif; font-size:15px; color: var(--accent); }
-    .proj p { margin:0; color:var(--muted); font-size:14px; }
-
-    .contacts { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
-    .link { display:inline-flex; align-items:center; gap:8px; padding:10px; border-radius:10px; background: #f7f2eb; text-decoration:none; color: var(--muted); border:1px solid #e6dfd5; transition: background 0.2s ease, transform 0.2s ease; }
-    .link:hover { background: var(--accent); color:#fff; transform: translateX(3px); }
-
-    .mission p { margin:5px 0; }
-
-    @media(max-width:880px) { header { flex-direction:column; align-items:flex-start; } .avatar { width:72px; height:72px; font-size:24px; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farah Chaabane — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fdfaf6;
+  --text: #1a1a1a;
+  --accent: #8b5e3c; /* brown/beige tone */
+  --muted: #4a4a4a;
+  --card: #fffaf0;
+  --shadow: rgba(0,0,0,0.1);
+  --radius: 14px;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); line-height:1.6; scroll-behavior:smooth; }
+a { text-decoration:none; color:inherit; }
+header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; position:sticky; top:0; background:var(--bg); box-shadow:0 2px 10px var(--shadow); z-index:1000; }
+nav a { margin-left:20px; font-weight:600; color:var(--accent); transition: color 0.3s ease; }
+nav a:hover { color:#000; }
+.hero { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:80px 20px; }
+.hero h1 { font-family:'Playfair Display', serif; font-size:36px; margin-bottom:10px; color:var(--accent); }
+.hero p { font-size:18px; color:var(--muted); max-width:600px; }
+.section { padding:60px 20px; max-width:900px; margin:0 auto; }
+.section-title { font-family:'Playfair Display', serif; font-size:20px; color:var(--accent); margin-bottom:20px; }
+.projects { display:flex; flex-direction:column; gap:20px; }
+.proj { padding:20px; border-left:4px solid var(--accent); background:var(--card); border-radius:var(--radius); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.proj:hover { transform: translateX(5px); box-shadow:0 10px 25px var(--shadow); }
+.proj h4 { font-family:'Playfair Display', serif; font-size:18px; margin-bottom:6px; color:var(--accent); }
+.proj p { color:var(--muted); font-size:14px; }
+.btn { display:inline-block; padding:10px 24px; border-radius:8px; border:2px solid var(--accent); background:var(--bg); color:var(--accent); font-weight:600; transition: all 0.3s ease; margin-top:10px; }
+.btn:hover { background:var(--accent); color:var(--bg); }
+.contact-links { display:flex; flex-direction:column; gap:12px; margin-top:10px; }
+.contact-links a { border:2px solid var(--accent); border-radius:8px; padding:10px; text-align:center; font-weight:600; color:var(--accent); transition: all 0.3s ease; }
+.contact-links a:hover { background:var(--accent); color:var(--bg); }
+footer { text-align:center; padding:30px 20px; color:var(--muted); font-size:14px; }
+@media(max-width:768px) { .projects { gap:15px; } }
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar">FC</div>
-      <div>
-        <h1>🌟 Hey, I’m Farah Chaabane 👋</h1>
-        <p class="lead">Welcome to my corner of GitHub — where code meets creativity! I build, break, and learn new things every day.</p>
-      </div>
-    </header>
 
-    <div class="section-title">🛠️ My Tech Playground</div>
-    <div class="tech">
-      <div class="chip">🐍 Python</div>
-      <div class="chip">🌐 JavaScript</div>
-      <div class="chip">💻 C</div>
-      <div class="chip">🦸 VSCode</div>
+<header>
+  <div>Farah Chaabane</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>🌟 Hey, I’m Farah Chaabane 👋</h1>
+  <p>Welcome to my professional portfolio — where code meets creativity. I build, explore, and innovate every day.</p>
+</section>
+
+<section id="about" class="section">
+  <div class="section-title">🚀 About Me</div>
+  <p><strong>What I do:</strong> Crafting software & exploring research ideas</p>
+  <p><strong>From:</strong> Tunisia 🇹🇳</p>
+  <p><strong>Excited by:</strong> AI, Machine Learning, Data Science & Open Source</p>
+  <p><strong>Currently:</strong> Second-year preparatory student @ Polytech Monastir</p>
+</section>
+
+<section id="projects" class="section">
+  <div class="section-title">📂 Projects</div>
+  <div class="projects">
+    <div class="proj">
+      <h4>🎭 <a href="#">Worst Website Ever</a></h4>
+      <p>Breaking design rules on purpose (yes, it’s as bad as it sounds 😅).</p>
     </div>
-
-    <div class="section-title">🚀 About Me</div>
-    <p><strong>What I do:</strong> Crafting software & exploring research ideas</p>
-    <p><strong>From:</strong> Tunisia 🇹🇳</p>
-    <p><strong>Excited by:</strong> AI, Machine Learning, Data Science & Open Source</p>
-    <p><strong>Currently:</strong> Second-year preparatory student @ Polytech Monastir</p>
-
-    <div class="section-title">📂 Projects I’m Proud Of</div>
-    <div class="projects">
-      <div class="proj">
-        <h4>🎭 <a href="#">Worst Website Ever</a></h4>
-        <p>Breaking design rules on purpose (yes, it’s as bad as it sounds 😅).</p>
-      </div>
-      <div class="proj">
-        <h4>🧠 <a href="#">MediChat</a></h4>
-        <p>An AI-powered tool to improve doctor–patient communication.</p>
-      </div>
-      <div class="proj">
-        <h4>📸 <a href="#">JoyArt</a></h4>
-        <p>My personal photography portfolio website.</p>
-      </div>
+    <div class="proj">
+      <h4>🧠 <a href="#">MediChat</a></h4>
+      <p>An AI-powered tool to improve doctor–patient communication.</p>
     </div>
-
-    <div class="section-title">📫 Let’s Connect</div>
-    <div class="contacts">
-      <a class="link" href="mailto:farahchaababane02@gmail.com">📧 Email</a>
-      <a class="link" href="https://chaabanefarah20.wixsite.com/tunisian-photography" target="_blank">🌐 Website</a>
-      <a class="link" href="https://www.linkedin.com/in/farah-chaabane-a8a9421ab/" target="_blank">💼 LinkedIn</a>
-    </div>
-
-    <div class="section-title">🎯 My Mission</div>
-    <div class="mission">
-      <p>🛠️ Build cool, meaningful projects & share knowledge</p>
-      <p>📚 Never stop learning</p>
-      <p>💡 Code is my canvas, and I’m here to paint with logic & creativity. 🎨💻</p>
+    <div class="proj">
+      <h4>📸 <a href="#">JoyArt</a></h4>
+      <p>My personal photography portfolio website.</p>
     </div>
   </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="section-title">📫 Contact Me</div>
+  <div class="contact-links">
+    <a href="mailto:farahchaababane02@gmail.com">📧 Email</a>
+    <a href="https://chaabanefarah20.wixsite.com/tunisian-photography" target="_blank">🌐 Website</a>
+    <a href="https://www.linkedin.com/in/farah-chaabane-a8a9421ab/" target="_blank">💼 LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  💡 Code is my canvas, and I’m here to paint with logic & creativity. 🎨💻
+</footer>
+
 </body>
 </html>
