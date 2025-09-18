@@ -29,7 +29,7 @@ I’m a developer & researcher from sunny Tunisia 🇹🇳, and this is where I 
 
 🌐 [My website] ( https://chaabanefarah20.wixsite.com/tunisian-photography )
 
-💼 [LinkedIn]( https://www.linkedin.com/in/farah-chaabane-a8a9421ab/ )
+💼 [LinkedIn] ( https://www.linkedin.com/in/farah-chaabane-a8a9421ab/ )
 
 🎯 My Mission
 🛠️ Build cool, meaningful projects and Share knowledge 
